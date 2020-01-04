@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "minetest";
+option java_outer_classname = "LocationProto";
+option objc_class_prefix = "Loc";
+
+package minetest;
+
+// The greeting service definition.
+service Location {
+    // Sends a greeting
+    rpc OfUser (UserRequest) returns (LocationReply) {}
+}
+
+// The request message containing the user's name.
+message UserRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message LocationReply {
+    double x = 1;
+    double y = 2;
+    double z = 3;
+}
